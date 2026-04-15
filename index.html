@@ -33,7 +33,6 @@
   }
   a { color: var(--accent); }
 
-  /* Top nav */
   nav.top {
     position: sticky; top: 0;
     backdrop-filter: blur(10px);
@@ -69,23 +68,10 @@
   }
   nav.top ol { counter-reset: nav; }
   nav.top ol a:hover { color: var(--accent); }
-  nav.top .cv-btn {
-    margin-left: 22px;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 13px;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  nav.top .cv-btn:hover { background: var(--accent-d); }
   @media (max-width: 820px) {
     nav.top ol { display: none; }
   }
 
-  /* Two-column layout */
   .layout {
     max-width: 1200px;
     margin: 0 auto;
@@ -111,9 +97,7 @@
   aside.contact ul.side-links {
     list-style: none; padding: 0; margin: 0;
   }
-  aside.contact ul.side-links li {
-    margin-bottom: 4px;
-  }
+  aside.contact ul.side-links li { margin-bottom: 4px; }
   aside.contact ul.side-links a {
     display: flex; align-items: center; gap: 10px;
     padding: 8px 10px;
@@ -145,19 +129,6 @@
     font-family: "JetBrains Mono", monospace;
   }
   aside.contact ul.side-links a:hover .val { color: var(--text); }
-  aside.contact .cv-pill {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 16px;
-    border: 1px solid var(--accent);
-    border-radius: 6px;
-    color: var(--accent);
-    font-family: "JetBrains Mono", monospace;
-    font-size: 12px;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  aside.contact .cv-pill:hover { background: var(--accent-d); }
   @media (max-width: 820px) {
     .layout {
       grid-template-columns: 1fr;
@@ -174,7 +145,6 @@
 
   main.content { min-width: 0; }
 
-  /* Hero */
   .intro { color: var(--accent); font-family: "JetBrains Mono", monospace; font-size: 14px; margin: 0 0 14px; }
   h1.name {
     font-size: 60px;
@@ -219,7 +189,6 @@
   }
   @keyframes blink { 50% { opacity: 0; } }
 
-  /* Section heading */
   .section-h {
     display: flex; align-items: center; gap: 16px;
     margin: 72px 0 24px;
@@ -233,11 +202,9 @@
   }
   .section-h .rule { flex: 1; height: 1px; background: var(--rule); }
 
-  /* About */
   .about p { color: var(--muted); font-size: 16px; margin: 0 0 14px; max-width: 620px; }
   .about a { text-decoration: none; border-bottom: 1px dashed var(--accent); }
 
-  /* Experience (timeline) */
   .xp {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -261,7 +228,6 @@
     .xp { grid-template-columns: 1fr; gap: 4px; }
   }
 
-  /* Education side-by-side */
   .edu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -282,7 +248,6 @@
   .edu .deg { color: var(--text-b); font-weight: 600; margin: 6px 0 2px; }
   .edu .uni { color: var(--muted); font-size: 14px; }
 
-  /* Publications */
   .pub {
     background: var(--bg-2);
     border: 1px solid var(--rule);
@@ -302,12 +267,22 @@
     margin: 0;
   }
   .pub .venue .year { color: var(--muted); margin-left: 8px; }
+  .pub .doi {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    margin: 4px 0 0;
+  }
+  .pub .doi a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(136,146,176,0.4);
+  }
+  .pub .doi a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   .pub-note {
     color: var(--muted); font-size: 13px; margin: 10px 0 0;
     font-family: "JetBrains Mono", monospace;
   }
 
-  /* Skills grid */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -357,7 +332,6 @@
 
   <div class="layout" id="top">
 
-    <!-- ==================== LEFT: CONTACT ==================== -->
     <aside class="contact">
       <h4>// contact</h4>
       <ul class="side-links">
@@ -386,7 +360,6 @@
           </a>
         </li>
         <li>
-          <!-- TODO: replace YOUR_ID with your Google Scholar user id -->
           <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">
             <span class="key">scholar</span>
             <span class="val">Google Scholar</span>
@@ -407,7 +380,6 @@
       </ul>
     </aside>
 
-    <!-- ==================== RIGHT: MAIN ==================== -->
     <main class="content">
 
       <p class="intro">// hi, my name is</p>
@@ -421,7 +393,6 @@
         <li>embedded-security</li>
       </ul>
 
-      <!-- ==================== ABOUT ==================== -->
       <div class="section-h" id="about">
         <span class="num">01.</span>
         <h3>About</h3>
@@ -431,7 +402,6 @@
         <p>I&rsquo;m a researcher and doctoral candidate at <a href="https://ivesk.hs-offenburg.de/" target="_blank" rel="noopener">ivESK</a>, <a href="https://www.hs-offenburg.de/" target="_blank" rel="noopener">Hochschule Offenburg</a>, working on security for narrowband IIoT networks.</p>
       </div>
 
-      <!-- ==================== EXPERIENCE ==================== -->
       <div class="section-h" id="experience">
         <span class="num">02.</span>
         <h3>Experience</h3>
@@ -488,7 +458,6 @@
         </div>
       </div>
 
-      <!-- ==================== EDUCATION ==================== -->
       <div class="section-h">
         <span class="num">03.</span>
         <h3>Education</h3>
@@ -508,42 +477,8 @@
         </div>
       </div>
 
-      <!-- ==================== PUBLICATIONS ==================== -->
-      <div class="section-h" id="publications">
-        <span class="num">04.</span>
-        <h3>Publications</h3>
-        <span class="rule"></span>
-      </div>
-
-      <div class="pub">
-        <p class="ttl">DALE: DTLS Adaptive Layer Extension for Constrained IoT Networks</p>
-        <p class="authors"><strong>A. S. Mathew</strong>, A. Sikora</p>
-        <p class="venue">IEEE WFCS <span class="year">2026</span></p>
-      </div>
-
-      <div class="pub">
-        <p class="ttl">DTLS Handshake Optimization with SCHC in LPWAN: Testbed Implementation and Performance Analysis</p>
-        <p class="authors">D. Stark, <strong>A. S. Mathew</strong>, A. Sikora</p>
-        <p class="venue">IEEE WFCS <span class="year">2026 &middot; accepted</span></p>
-      </div>
-
-      <div class="pub">
-        <p class="ttl">Integrating IPHC and SCHC with DTLS: A Comparative Study of Simulation and Testbed-Based IoT Networks</p>
-        <p class="authors">N. H. M. Yusoff, N. A. Emran, N. Harum, K. Abdullah, <strong>A. S. Mathew</strong>, A. Sikora</p>
-        <p class="venue">IEEE IDAACS <span class="year">2025</span></p>
-      </div>
-
-      <div class="pub">
-        <p class="ttl">Realistic Modelling and Optimization of DTLS Handshakes in Constrained LPWAN Environments</p>
-        <p class="authors"><strong>A. S. Mathew</strong>, A. Sikora</p>
-        <p class="venue">IEEE CITS <span class="year">2025</span></p>
-      </div>
-
-      <p class="pub-note">// full list on <a href="https://orcid.org/0009-0001-7682-1126" target="_blank" rel="noopener">ORCID 0009-0001-7682-1126</a></p>
-
-      <!-- ==================== SKILLS ==================== -->
       <div class="section-h">
-        <span class="num">05.</span>
+        <span class="num">04.</span>
         <h3>Skills &amp; tools</h3>
         <span class="rule"></span>
       </div>
@@ -571,6 +506,54 @@
         </div>
       </div>
 
+      <div class="section-h" id="publications">
+        <span class="num">05.</span>
+        <h3>Publications</h3>
+        <span class="rule"></span>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">DALE: DTLS Adaptive Layer Extension for Constrained IoT Networks</p>
+        <p class="authors"><strong>A. S. Mathew</strong>, A. Sikora, M. Schappacher</p>
+        <p class="venue">IEEE WFCS <span class="year">2026 &middot; work-in-progress</span></p>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">DTLS Handshake Optimization with SCHC in LPWAN: Testbed Implementation and Performance Analysis</p>
+        <p class="authors">D. Stark, <strong>A. S. Mathew</strong>, A. Sikora</p>
+        <p class="venue">IEEE WFCS <span class="year">2026 &middot; accepted</span></p>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">Enhancing 6LoWPAN Performance in Lossy Networks Using Complex and Combined Header Compression</p>
+        <p class="authors">N. H. M. Yusoff, K. Abdullah, J. Ag. Besar, N. Ahmad, <strong>A. S. Mathew</strong>, A. Sikora</p>
+        <p class="venue">IEEE IDAACS <span class="year">Sep 2025</span></p>
+        <p class="doi"><a href="https://doi.org/10.1109/idaacs68557.2025.11322017" target="_blank" rel="noopener">doi.org/10.1109/idaacs68557.2025.11322017</a></p>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">Integrating IPHC and SCHC with DTLS: A Comparative Study of Simulation and Testbed-Based IoT Networks</p>
+        <p class="authors">N. H. M. Yusoff, N. A. Emran, N. Harum, K. Abdullah, <strong>A. S. Mathew</strong>, A. Sikora</p>
+        <p class="venue">IEEE IDAACS <span class="year">Sep 2025</span></p>
+        <p class="doi"><a href="https://doi.org/10.1109/idaacs68557.2025.11322126" target="_blank" rel="noopener">doi.org/10.1109/idaacs68557.2025.11322126</a></p>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">Realistic Modelling and Optimization of DTLS Handshakes in Constrained LPWAN Environments</p>
+        <p class="authors"><strong>A. S. Mathew</strong>, A. Sikora</p>
+        <p class="venue">IEEE CITS <span class="year">Jul 2025</span></p>
+        <p class="doi"><a href="https://doi.org/10.1109/cits65975.2025.11099413" target="_blank" rel="noopener">doi.org/10.1109/cits65975.2025.11099413</a></p>
+      </div>
+
+      <div class="pub">
+        <p class="ttl">State of the Art in Smart Metering Infrastructure Security: A Keyword Co-Occurrence Analysis</p>
+        <p class="authors"><strong>A. S. Mathew</strong>, A. Sikora</p>
+        <p class="venue">IEEE ICEST <span class="year">Jun 2025</span></p>
+        <p class="doi"><a href="https://doi.org/10.1109/icest66328.2025.11098305" target="_blank" rel="noopener">doi.org/10.1109/icest66328.2025.11098305</a></p>
+      </div>
+
+      <p class="pub-note">// canonical list at <a href="https://orcid.org/0009-0001-7682-1126" target="_blank" rel="noopener">ORCID 0009-0001-7682-1126</a></p>
+
       <footer>
         &copy; Anu Sathyajith Mathew
       </footer>
@@ -578,7 +561,6 @@
   </div>
 
   <script>
-    // subtle border on nav when page is scrolled
     const nav = document.getElementById("topnav");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 8) nav.classList.add("stuck");
